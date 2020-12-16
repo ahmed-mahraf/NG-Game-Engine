@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\bin\Debug-windows\Engine\</OutDir>
+    <IntDir>..\build\Debug-windows\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\bin\Release-windows\Engine\</OutDir>
+    <IntDir>..\build\Release-windows\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>engine_pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NG_PLATFORM_WINDOWS;NG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>enginecode;enginecode\include\independent;precompiled;..\vendor\spdlog\include;..\vendor\glfw\include;..\vendor\Glad\include;..\vendor\glm;..\vendor\stb_image;..\vendor\freetype2\include;..\vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>engine_pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NG_PLATFORM_WINDOWS;NG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>enginecode;enginecode\include\independent;precompiled;..\vendor\spdlog\include;..\vendor\glfw\include;..\vendor\Glad\include;..\vendor\glm;..\vendor\stb_image;..\vendor\freetype2\include;..\vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="enginecode\engine.h" />
+    <ClInclude Include="enginecode\include\independent\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="enginecode\include\independent\core\Timestep.h" />
+    <ClInclude Include="enginecode\include\independent\core\application.h" />
+    <ClInclude Include="enginecode\include\independent\core\base.h" />
+    <ClInclude Include="enginecode\include\independent\core\entryPoint.h" />
+    <ClInclude Include="enginecode\include\independent\debug\instrumentor.h" />
+    <ClInclude Include="enginecode\include\independent\events\event.h" />
+    <ClInclude Include="enginecode\include\independent\events\event_key.h" />
+    <ClInclude Include="enginecode\include\independent\events\event_mouse.h" />
+    <ClInclude Include="enginecode\include\independent\events\event_window.h" />
+    <ClInclude Include="enginecode\include\independent\events\inputPoller.h" />
+    <ClInclude Include="enginecode\include\independent\layers\Layer.h" />
+    <ClInclude Include="enginecode\include\independent\layers\LayerStack.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\GLFW\GLFWCodes.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\GLFW\GLFWInputPoller.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLGraphicsContext.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLIndexBuffer.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLShader.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLTexture.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLVertexArray.h" />
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLVertexBuffer.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\BufferLayout.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\OrthoCamera.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\OrthoCameraController.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\Texture.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\VertexArray.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\VertexBuffer.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\graphicsContext.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\indexBuffer.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\renderCommand.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\renderer.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\renderer2D.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\rendererAPI.h" />
+    <ClInclude Include="enginecode\include\independent\rendering\shader.h" />
+    <ClInclude Include="enginecode\include\independent\systems\MyLogger.h" />
+    <ClInclude Include="enginecode\include\independent\systems\system.h" />
+    <ClInclude Include="enginecode\include\independent\windows\WindowsWindow.h" />
+    <ClInclude Include="enginecode\include\independent\windows\window.h" />
+    <ClInclude Include="precompiled\engine_pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="enginecode\include\independent\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="enginecode\include\independent\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="enginecode\src\independent\core\application.cpp" />
+    <ClCompile Include="enginecode\src\independent\debug\instrumentor.cpp" />
+    <ClCompile Include="enginecode\src\independent\layers\Layer.cpp" />
+    <ClCompile Include="enginecode\src\independent\layers\LayerStack.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\GLFW\GLFWInputPoller.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLGraphicsContext.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLIndexBuffer.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLShader.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLTexture.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLVertexBuffer.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\IndexBuffer.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\OrthoCamera.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\OrthoCameraController.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\Texture.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\VertexArray.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\VertexBuffer.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\graphicsContext.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\renderCommand.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\renderer.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\renderer2D.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\rendererAPI.cpp" />
+    <ClCompile Include="enginecode\src\independent\rendering\shader.cpp" />
+    <ClCompile Include="enginecode\src\independent\systems\MyLogger.cpp" />
+    <ClCompile Include="enginecode\src\independent\vendor\stb_image\stb_image.cpp" />
+    <ClCompile Include="enginecode\src\independent\windows\WindowsWindow.cpp" />
+    <ClCompile Include="precompiled\engine_pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vendor\glfw\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\freetype2\Freetype.vcxproj">
+      <Project>{69ED2050-55BA-7B5B-7ED3-69036AFFB0E9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\assimp\assimp.vcxproj">
+      <Project>{724885F2-5EEA-AFC8-47A5-C31C33E63619}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="enginecode">
+      <UniqueIdentifier>{76906484-6248-A6D1-CB4F-7F2DB72641C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include">
+      <UniqueIdentifier>{E9CDDD53-D5B1-9EA9-3E12-99FC2A15892B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent">
+      <UniqueIdentifier>{C6A25F23-B2C8-298A-9B0E-AF5587D34E56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\ImGui">
+      <UniqueIdentifier>{7094A445-5C7B-663D-05CC-CC5AF191DFA3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\core">
+      <UniqueIdentifier>{FEFEDCCB-6AB8-4776-F317-62505FD0FDE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\debug">
+      <UniqueIdentifier>{DC398947-C820-4B3F-7171-B15C5D37C4A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\events">
+      <UniqueIdentifier>{0AC83A3C-768C-392C-3FF2-69F6AB75D561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\layers">
+      <UniqueIdentifier>{E5B21D4B-5177-1C3B-1ADD-4C058660B870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\platforms">
+      <UniqueIdentifier>{AD398A97-99B6-7DDA-C233-7EEEAE0F1A6E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\platforms\GLFW">
+      <UniqueIdentifier>{0C09DD6A-7879-DFE3-4198-596CADC717E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\platforms\openGL">
+      <UniqueIdentifier>{61B22EF6-CDED-8EB9-D6E2-0B49429D13EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\rendering">
+      <UniqueIdentifier>{B33B08CE-9FB8-FB10-C835-FC24B41198A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\systems">
+      <UniqueIdentifier>{EDF64201-D948-1AF1-C267-5701AE5833DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\include\independent\windows">
+      <UniqueIdentifier>{204B760F-0C9D-4DFF-F5BB-8A0FE1AC66E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src">
+      <UniqueIdentifier>{8D999F4C-7967-9352-62FB-03794E686FB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent">
+      <UniqueIdentifier>{6A040C7B-5614-B84B-BFCD-1C6AABFCA6E4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\core">
+      <UniqueIdentifier>{2207FC91-8EEA-0AD2-97ED-380E0350D122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\debug">
+      <UniqueIdentifier>{804689D1-6C97-7413-95FB-62D581AB077D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\layers">
+      <UniqueIdentifier>{09541F15-75C2-7494-BEAB-2F942A596A30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\platforms">
+      <UniqueIdentifier>{51F84706-3DDF-09FE-E62F-701BD2F58264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\platforms\GLFW">
+      <UniqueIdentifier>{308E6F4A-9CA8-D2EB-E5CA-E27F5124FAF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\platforms\openGL">
+      <UniqueIdentifier>{85107704-F175-0A8B-7A4E-AC63E6B2FFF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\rendering">
+      <UniqueIdentifier>{57FAC53C-43E1-8734-EC31-EE51D8F7009B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\systems">
+      <UniqueIdentifier>{91BC780B-7DF8-7B75-E60A-946CD2652490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\vendor">
+      <UniqueIdentifier>{873FB52C-F3AD-0AAC-3C97-C5ABA8440048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\vendor\stb_image">
+      <UniqueIdentifier>{E1442EF4-4DAA-C17A-D682-635342E7B6E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enginecode\src\independent\windows">
+      <UniqueIdentifier>{C410AC19-B04C-AF83-195F-C77A05BA579E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="precompiled">
+      <UniqueIdentifier>{B96624CA-251C-9DBF-AE10-97961AC593C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="enginecode\engine.h">
+      <Filter>enginecode</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\ImGui\ImGuiLayer.h">
+      <Filter>enginecode\include\independent\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\core\Timestep.h">
+      <Filter>enginecode\include\independent\core</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\core\application.h">
+      <Filter>enginecode\include\independent\core</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\core\base.h">
+      <Filter>enginecode\include\independent\core</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\core\entryPoint.h">
+      <Filter>enginecode\include\independent\core</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\debug\instrumentor.h">
+      <Filter>enginecode\include\independent\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\events\event.h">
+      <Filter>enginecode\include\independent\events</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\events\event_key.h">
+      <Filter>enginecode\include\independent\events</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\events\event_mouse.h">
+      <Filter>enginecode\include\independent\events</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\events\event_window.h">
+      <Filter>enginecode\include\independent\events</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\events\inputPoller.h">
+      <Filter>enginecode\include\independent\events</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\layers\Layer.h">
+      <Filter>enginecode\include\independent\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\layers\LayerStack.h">
+      <Filter>enginecode\include\independent\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\GLFW\GLFWCodes.h">
+      <Filter>enginecode\include\independent\platforms\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\GLFW\GLFWInputPoller.h">
+      <Filter>enginecode\include\independent\platforms\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLGraphicsContext.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLIndexBuffer.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLRendererAPI.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLShader.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLTexture.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLVertexArray.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\platforms\openGL\OpenGLVertexBuffer.h">
+      <Filter>enginecode\include\independent\platforms\openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\BufferLayout.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\OrthoCamera.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\OrthoCameraController.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\Texture.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\VertexArray.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\VertexBuffer.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\graphicsContext.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\indexBuffer.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\renderCommand.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\renderer.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\renderer2D.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\rendererAPI.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\rendering\shader.h">
+      <Filter>enginecode\include\independent\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\systems\MyLogger.h">
+      <Filter>enginecode\include\independent\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\systems\system.h">
+      <Filter>enginecode\include\independent\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\windows\WindowsWindow.h">
+      <Filter>enginecode\include\independent\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="enginecode\include\independent\windows\window.h">
+      <Filter>enginecode\include\independent\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="precompiled\engine_pch.h">
+      <Filter>precompiled</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="enginecode\include\independent\ImGui\ImGuiBuild.cpp">
+      <Filter>enginecode\include\independent\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\include\independent\ImGui\ImGuiLayer.cpp">
+      <Filter>enginecode\include\independent\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\core\application.cpp">
+      <Filter>enginecode\src\independent\core</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\debug\instrumentor.cpp">
+      <Filter>enginecode\src\independent\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\layers\Layer.cpp">
+      <Filter>enginecode\src\independent\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\layers\LayerStack.cpp">
+      <Filter>enginecode\src\independent\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\GLFW\GLFWInputPoller.cpp">
+      <Filter>enginecode\src\independent\platforms\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLGraphicsContext.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLIndexBuffer.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLRendererAPI.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLShader.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLTexture.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLVertexArray.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\platforms\openGL\OpenGLVertexBuffer.cpp">
+      <Filter>enginecode\src\independent\platforms\openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\IndexBuffer.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\OrthoCamera.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\OrthoCameraController.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\Texture.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\VertexArray.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\VertexBuffer.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\graphicsContext.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\renderCommand.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\renderer.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\renderer2D.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\rendererAPI.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\rendering\shader.cpp">
+      <Filter>enginecode\src\independent\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\systems\MyLogger.cpp">
+      <Filter>enginecode\src\independent\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\vendor\stb_image\stb_image.cpp">
+      <Filter>enginecode\src\independent\vendor\stb_image</Filter>
+    </ClCompile>
+    <ClCompile Include="enginecode\src\independent\windows\WindowsWindow.cpp">
+      <Filter>enginecode\src\independent\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="precompiled\engine_pch.cpp">
+      <Filter>precompiled</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

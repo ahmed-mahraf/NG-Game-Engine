@@ -1,0 +1,28 @@
+/** @file Timestep.h
+*   declarations for counting variables
+*/
+#pragma once
+
+namespace Engine
+{
+	/**
+	*@class timestep
+	*The entry point to the game engine
+	*/
+
+	class Timestep
+	{
+	public:
+		Timestep(float time = 0.0f)
+			:m_Time(time)
+		{
+
+		}
+
+		operator float() const { return m_Time; }
+		float GetSeconds() const { return m_Time; } 
+		float GetMilliSeconds()const { return m_Time * 1000.0f; }
+	private:
+		float m_Time;
+	};
+}

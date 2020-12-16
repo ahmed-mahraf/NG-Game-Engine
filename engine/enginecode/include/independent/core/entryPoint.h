@@ -20,17 +20,17 @@ int main(int argc, char** argv)
 	m_logger->start(); //<! start and reset logger
 	
 	//<! start application
-	NG_PROFILE_BEGIN_SESSION("Startup", "HazelProfile-Startup.json");
+	NG_PROFILE_BEGIN_SESSION("Startup", "NextGenProfile-Startup.json");
 	auto application = Engine::startApplication();
 	NG_PROFILE_END_SESSION();
 	
 	//<! run application
-	NG_PROFILE_BEGIN_SESSION("Runtime", "HazelProfile-Runtime.json");
+	NG_PROFILE_BEGIN_SESSION("Runtime", "NextGenProfile-Runtime.json");
 	application->run();
 	NG_PROFILE_END_SESSION();
 	
 	//<! delete application
-	NG_PROFILE_BEGIN_SESSION("Startup", "HazelProfile-Shutdown.json");
+	NG_PROFILE_BEGIN_SESSION("Startup", "NextGenProfile-Shutdown.json");
 	delete application; 
 	NG_PROFILE_END_SESSION();
 

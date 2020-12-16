@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{724885F2-5EEA-AFC8-47A5-C31C33E63619}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>assimp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\bin\Debug-windows\assimp\</OutDir>
+    <IntDir>..\..\build\Debug-windows\assimp\</IntDir>
+    <TargetName>assimp</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\bin\Release-windows\assimp\</OutDir>
+    <IntDir>..\..\build\Release-windows\assimp\</IntDir>
+    <TargetName>assimp</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_STEP_IMPORTER;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;src;..\IrrXML\code;..\zlib\code;.;contrib\rapidjson\include;contrib\unzip;contrib\Open3DGC;contrib\clipper;contrib\openddlparser\include;contrib\utf8cpp\source;contrib\zip\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_STEP_IMPORTER;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;src;..\IrrXML\code;..\zlib\code;.;contrib\rapidjson\include;contrib\unzip;contrib\Open3DGC;contrib\clipper;contrib\openddlparser\include;contrib\utf8cpp\source;contrib\zip\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="contrib\Open3DGC\o3dgcArithmeticCodec.cpp" />
+    <ClCompile Include="contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp" />
+    <ClCompile Include="contrib\Open3DGC\o3dgcDynamicVectorEncoder.cpp" />
+    <ClCompile Include="contrib\Open3DGC\o3dgcTools.cpp" />
+    <ClCompile Include="contrib\Open3DGC\o3dgcTriangleFans.cpp" />
+    <ClCompile Include="contrib\clipper\clipper.cpp" />
+    <ClCompile Include="contrib\unzip\ioapi.c" />
+    <ClCompile Include="contrib\unzip\unzip.c" />
+    <ClCompile Include="contrib\zip\src\zip.c" />
+    <ClCompile Include="src\3DS\3DSConverter.cpp" />
+    <ClCompile Include="src\3DS\3DSExporter.cpp" />
+    <ClCompile Include="src\3DS\3DSLoader.cpp" />
+    <ClCompile Include="src\3MF\D3MFExporter.cpp" />
+    <ClCompile Include="src\3MF\D3MFImporter.cpp" />
+    <ClCompile Include="src\3MF\D3MFOpcPackage.cpp" />
+    <ClCompile Include="src\AC\ACLoader.cpp" />
+    <ClCompile Include="src\AMF\AMFImporter.cpp" />
+    <ClCompile Include="src\AMF\AMFImporter_Geometry.cpp" />
+    <ClCompile Include="src\AMF\AMFImporter_Material.cpp" />
+    <ClCompile Include="src\AMF\AMFImporter_Postprocess.cpp" />
+    <ClCompile Include="src\ASE\ASELoader.cpp" />
+    <ClCompile Include="src\ASE\ASEParser.cpp" />
+    <ClCompile Include="src\Assbin\AssbinExporter.cpp" />
+    <ClCompile Include="src\Assbin\AssbinLoader.cpp" />
+    <ClCompile Include="src\Assjson\json_exporter.cpp" />
+    <ClCompile Include="src\Assjson\mesh_splitter.cpp" />
+    <ClCompile Include="src\Assxml\AssxmlExporter.cpp" />
+    <ClCompile Include="src\B3D\B3DImporter.cpp" />
+    <ClCompile Include="src\BVH\BVHLoader.cpp" />
+    <ClCompile Include="src\Blender\BlenderBMesh.cpp" />
+    <ClCompile Include="src\Blender\BlenderCustomData.cpp" />
+    <ClCompile Include="src\Blender\BlenderDNA.cpp" />
+    <ClCompile Include="src\Blender\BlenderLoader.cpp" />
+    <ClCompile Include="src\Blender\BlenderModifier.cpp" />
+    <ClCompile Include="src\Blender\BlenderScene.cpp" />
+    <ClCompile Include="src\Blender\BlenderTessellator.cpp" />
+    <ClCompile Include="src\C4D\C4DImporter.cpp" />
+    <ClCompile Include="src\CApi\AssimpCExport.cpp" />
+    <ClCompile Include="src\CApi\CInterfaceIOWrapper.cpp" />
+    <ClCompile Include="src\COB\COBLoader.cpp" />
+    <ClCompile Include="src\CSM\CSMLoader.cpp" />
+    <ClCompile Include="src\Collada\ColladaExporter.cpp" />
+    <ClCompile Include="src\Collada\ColladaLoader.cpp" />
+    <ClCompile Include="src\Collada\ColladaParser.cpp" />
+    <ClCompile Include="src\Common\Assimp.cpp" />
+    <ClCompile Include="src\Common\BaseImporter.cpp" />
+    <ClCompile Include="src\Common\BaseProcess.cpp" />
+    <ClCompile Include="src\Common\Bitmap.cpp" />
+    <ClCompile Include="src\Common\CreateAnimMesh.cpp" />
+    <ClCompile Include="src\Common\DefaultIOStream.cpp" />
+    <ClCompile Include="src\Common\DefaultIOSystem.cpp" />
+    <ClCompile Include="src\Common\DefaultLogger.cpp" />
+    <ClCompile Include="src\Common\Exporter.cpp" />
+    <ClCompile Include="src\Common\Importer.cpp" />
+    <ClCompile Include="src\Common\ImporterRegistry.cpp" />
+    <ClCompile Include="src\Common\PostStepRegistry.cpp" />
+    <ClCompile Include="src\Common\RemoveComments.cpp" />
+    <ClCompile Include="src\Common\SGSpatialSort.cpp" />
+    <ClCompile Include="src\Common\SceneCombiner.cpp" />
+    <ClCompile Include="src\Common\ScenePreprocessor.cpp" />
+    <ClCompile Include="src\Common\SkeletonMeshBuilder.cpp" />
+    <ClCompile Include="src\Common\SpatialSort.cpp" />
+    <ClCompile Include="src\Common\SplitByBoneCountProcess.cpp" />
+    <ClCompile Include="src\Common\StandardShapes.cpp" />
+    <ClCompile Include="src\Common\Subdivision.cpp" />
+    <ClCompile Include="src\Common\TargetAnimation.cpp" />
+    <ClCompile Include="src\Common\Version.cpp" />
+    <ClCompile Include="src\Common\VertexTriangleAdjacency.cpp" />
+    <ClCompile Include="src\Common\ZipArchiveIOSystem.cpp" />
+    <ClCompile Include="src\Common\scene.cpp" />
+    <ClCompile Include="src\Common\simd.cpp" />
+    <ClCompile Include="src\DXF\DXFLoader.cpp" />
+    <ClCompile Include="src\FBX\FBXAnimation.cpp" />
+    <ClCompile Include="src\FBX\FBXBinaryTokenizer.cpp" />
+    <ClCompile Include="src\FBX\FBXConverter.cpp" />
+    <ClCompile Include="src\FBX\FBXDeformer.cpp" />
+    <ClCompile Include="src\FBX\FBXDocument.cpp" />
+    <ClCompile Include="src\FBX\FBXDocumentUtil.cpp" />
+    <ClCompile Include="src\FBX\FBXExportNode.cpp" />
+    <ClCompile Include="src\FBX\FBXExportProperty.cpp" />
+    <ClCompile Include="src\FBX\FBXExporter.cpp" />
+    <ClCompile Include="src\FBX\FBXImporter.cpp" />
+    <ClCompile Include="src\FBX\FBXMaterial.cpp" />
+    <ClCompile Include="src\FBX\FBXMeshGeometry.cpp" />
+    <ClCompile Include="src\FBX\FBXModel.cpp" />
+    <ClCompile Include="src\FBX\FBXNodeAttribute.cpp" />
+    <ClCompile Include="src\FBX\FBXParser.cpp" />
+    <ClCompile Include="src\FBX\FBXProperties.cpp" />
+    <ClCompile Include="src\FBX\FBXTokenizer.cpp" />
+    <ClCompile Include="src\FBX\FBXUtil.cpp" />
+    <ClCompile Include="src\HMP\HMPLoader.cpp" />
+    <ClCompile Include="src\Irr\IRRLoader.cpp" />
+    <ClCompile Include="src\Irr\IRRMeshLoader.cpp" />
+    <ClCompile Include="src\Irr\IRRShared.cpp" />
+    <ClCompile Include="src\LWO\LWOAnimation.cpp" />
+    <ClCompile Include="src\LWO\LWOBLoader.cpp" />
+    <ClCompile Include="src\LWO\LWOLoader.cpp" />
+    <ClCompile Include="src\LWO\LWOMaterial.cpp" />
+    <ClCompile Include="src\LWS\LWSLoader.cpp" />
+    <ClCompile Include="src\MD2\MD2Loader.cpp" />
+    <ClCompile Include="src\MD3\MD3Loader.cpp" />
+    <ClCompile Include="src\MD5\MD5Loader.cpp" />
+    <ClCompile Include="src\MD5\MD5Parser.cpp" />
+    <ClCompile Include="src\MDC\MDCLoader.cpp" />
+    <ClCompile Include="src\MDL\MDLLoader.cpp" />
+    <ClCompile Include="src\MDL\MDLMaterialLoader.cpp" />
+    <ClCompile Include="src\MMD\MMDImporter.cpp" />
+    <ClCompile Include="src\MMD\MMDPmxParser.cpp" />
+    <ClCompile Include="src\MS3D\MS3DLoader.cpp" />
+    <ClCompile Include="src\Material\MaterialSystem.cpp" />
+    <ClCompile Include="src\NDO\NDOLoader.cpp" />
+    <ClCompile Include="src\NFF\NFFLoader.cpp" />
+    <ClCompile Include="src\OFF\OFFLoader.cpp" />
+    <ClCompile Include="src\Obj\ObjExporter.cpp" />
+    <ClCompile Include="src\Obj\ObjFileImporter.cpp" />
+    <ClCompile Include="src\Obj\ObjFileMtlImporter.cpp" />
+    <ClCompile Include="src\Obj\ObjFileParser.cpp" />
+    <ClCompile Include="src\Ogre\OgreBinarySerializer.cpp" />
+    <ClCompile Include="src\Ogre\OgreImporter.cpp" />
+    <ClCompile Include="src\Ogre\OgreMaterial.cpp" />
+    <ClCompile Include="src\Ogre\OgreStructs.cpp" />
+    <ClCompile Include="src\Ogre\OgreXmlSerializer.cpp" />
+    <ClCompile Include="src\OpenGEX\OpenGEXExporter.cpp" />
+    <ClCompile Include="src\OpenGEX\OpenGEXImporter.cpp" />
+    <ClCompile Include="src\Ply\PlyExporter.cpp" />
+    <ClCompile Include="src\Ply\PlyLoader.cpp" />
+    <ClCompile Include="src\Ply\PlyParser.cpp" />
+    <ClCompile Include="src\PostProcessing\CalcTangentsProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\ComputeUVMappingProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\ConvertToLHProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\DeboneProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\DropFaceNormalsProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\EmbedTexturesProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\FindDegenerates.cpp" />
+    <ClCompile Include="src\PostProcessing\FindInstancesProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\FindInvalidDataProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\FixNormalsStep.cpp" />
+    <ClCompile Include="src\PostProcessing\GenBoundingBoxesProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\GenFaceNormalsProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\GenVertexNormalsProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\ImproveCacheLocality.cpp" />
+    <ClCompile Include="src\PostProcessing\JoinVerticesProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\LimitBoneWeightsProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\MakeVerboseFormat.cpp" />
+    <ClCompile Include="src\PostProcessing\OptimizeGraph.cpp" />
+    <ClCompile Include="src\PostProcessing\OptimizeMeshes.cpp" />
+    <ClCompile Include="src\PostProcessing\PretransformVertices.cpp" />
+    <ClCompile Include="src\PostProcessing\ProcessHelper.cpp" />
+    <ClCompile Include="src\PostProcessing\RemoveRedundantMaterials.cpp" />
+    <ClCompile Include="src\PostProcessing\RemoveVCProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\ScaleProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\SortByPTypeProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\SplitLargeMeshes.cpp" />
+    <ClCompile Include="src\PostProcessing\TextureTransform.cpp" />
+    <ClCompile Include="src\PostProcessing\TriangulateProcess.cpp" />
+    <ClCompile Include="src\PostProcessing\ValidateDataStructure.cpp" />
+    <ClCompile Include="src\Q3BSP\Q3BSPFileImporter.cpp" />
+    <ClCompile Include="src\Q3BSP\Q3BSPFileParser.cpp" />
+    <ClCompile Include="src\Q3D\Q3DLoader.cpp" />
+    <ClCompile Include="src\Raw\RawLoader.cpp" />
+    <ClCompile Include="src\SIB\SIBImporter.cpp" />
+    <ClCompile Include="src\SMD\SMDLoader.cpp" />
+    <ClCompile Include="src\STL\STLExporter.cpp" />
+    <ClCompile Include="src\STL\STLLoader.cpp" />
+    <ClCompile Include="src\Step\StepExporter.cpp" />
+    <ClCompile Include="src\Terragen\TerragenLoader.cpp" />
+    <ClCompile Include="src\Unreal\UnrealLoader.cpp" />
+    <ClCompile Include="src\X\XFileExporter.cpp" />
+    <ClCompile Include="src\X\XFileImporter.cpp" />
+    <ClCompile Include="src\X\XFileParser.cpp" />
+    <ClCompile Include="src\X3D\FIReader.cpp" />
+    <ClCompile Include="src\X3D\X3DExporter.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Geometry2D.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Geometry3D.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Group.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Light.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Metadata.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Networking.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Postprocess.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Rendering.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Shape.cpp" />
+    <ClCompile Include="src\X3D\X3DImporter_Texturing.cpp" />
+    <ClCompile Include="src\X3D\X3DVocabulary.cpp" />
+    <ClCompile Include="src\XGL\XGLLoader.cpp" />
+    <ClCompile Include="src\glTF\glTFCommon.cpp" />
+    <ClCompile Include="src\glTF\glTFExporter.cpp" />
+    <ClCompile Include="src\glTF\glTFImporter.cpp" />
+    <ClCompile Include="src\glTF2\glTF2Exporter.cpp" />
+    <ClCompile Include="src\glTF2\glTF2Importer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\googletest\vendor\googletest\googletest.vcxproj">
+      <Project>{E2296FC4-CEE1-B011-37E9-896D23C04B02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\IrrXML\IrrXML.vcxproj">
+      <Project>{E38776BA-CF29-A190-B8E4-B4E4A42528E1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{16CFA17C-0206-A30D-ABF2-881097081F0F}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

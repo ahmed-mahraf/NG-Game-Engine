@@ -124,9 +124,6 @@
     <Filter Include="src\OFF">
       <UniqueIdentifier>{D7982FA9-4378-AE44-4C90-391BB8EE14A6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Obj">
-      <UniqueIdentifier>{979C2FA9-037C-AE44-0C94-391B78F214A6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Ogre">
       <UniqueIdentifier>{294623CF-1513-7EDA-3E2C-6C822A58B368}</UniqueIdentifier>
     </Filter>
@@ -521,18 +518,6 @@
     </ClCompile>
     <ClCompile Include="src\OFF\OFFLoader.cpp">
       <Filter>src\OFF</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Obj\ObjExporter.cpp">
-      <Filter>src\Obj</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Obj\ObjFileImporter.cpp">
-      <Filter>src\Obj</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Obj\ObjFileMtlImporter.cpp">
-      <Filter>src\Obj</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Obj\ObjFileParser.cpp">
-      <Filter>src\Obj</Filter>
     </ClCompile>
     <ClCompile Include="src\Ogre\OgreBinarySerializer.cpp">
       <Filter>src\Ogre</Filter>

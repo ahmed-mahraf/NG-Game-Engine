@@ -200,10 +200,6 @@
     <ClCompile Include="src\NDO\NDOLoader.cpp" />
     <ClCompile Include="src\NFF\NFFLoader.cpp" />
     <ClCompile Include="src\OFF\OFFLoader.cpp" />
-    <ClCompile Include="src\Obj\ObjExporter.cpp" />
-    <ClCompile Include="src\Obj\ObjFileImporter.cpp" />
-    <ClCompile Include="src\Obj\ObjFileMtlImporter.cpp" />
-    <ClCompile Include="src\Obj\ObjFileParser.cpp" />
     <ClCompile Include="src\Ogre\OgreBinarySerializer.cpp" />
     <ClCompile Include="src\Ogre\OgreImporter.cpp" />
     <ClCompile Include="src\Ogre\OgreMaterial.cpp" />

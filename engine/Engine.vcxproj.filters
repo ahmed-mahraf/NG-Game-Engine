@@ -16,9 +16,6 @@
     <Filter Include="enginecode\include\independent\core">
       <UniqueIdentifier>{FEFEDCCB-6AB8-4776-F317-62505FD0FDE5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="enginecode\include\independent\debug">
-      <UniqueIdentifier>{DC398947-C820-4B3F-7171-B15C5D37C4A5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="enginecode\include\independent\events">
       <UniqueIdentifier>{0AC83A3C-768C-392C-3FF2-69F6AB75D561}</UniqueIdentifier>
     </Filter>
@@ -51,9 +48,6 @@
     </Filter>
     <Filter Include="enginecode\src\independent\core">
       <UniqueIdentifier>{2207FC91-8EEA-0AD2-97ED-380E0350D122}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="enginecode\src\independent\debug">
-      <UniqueIdentifier>{804689D1-6C97-7413-95FB-62D581AB077D}</UniqueIdentifier>
     </Filter>
     <Filter Include="enginecode\src\independent\layers">
       <UniqueIdentifier>{09541F15-75C2-7494-BEAB-2F942A596A30}</UniqueIdentifier>
@@ -104,9 +98,6 @@
     </ClInclude>
     <ClInclude Include="enginecode\include\independent\core\entryPoint.h">
       <Filter>enginecode\include\independent\core</Filter>
-    </ClInclude>
-    <ClInclude Include="enginecode\include\independent\debug\instrumentor.h">
-      <Filter>enginecode\include\independent\debug</Filter>
     </ClInclude>
     <ClInclude Include="enginecode\include\independent\events\event.h">
       <Filter>enginecode\include\independent\events</Filter>
@@ -220,9 +211,6 @@
     </ClCompile>
     <ClCompile Include="enginecode\src\independent\core\application.cpp">
       <Filter>enginecode\src\independent\core</Filter>
-    </ClCompile>
-    <ClCompile Include="enginecode\src\independent\debug\instrumentor.cpp">
-      <Filter>enginecode\src\independent\debug</Filter>
     </ClCompile>
     <ClCompile Include="enginecode\src\independent\layers\Layer.cpp">
       <Filter>enginecode\src\independent\layers</Filter>

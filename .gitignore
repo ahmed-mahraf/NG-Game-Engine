@@ -6,6 +6,7 @@
 # Project files
 build/
 Engine.sln
+*.vcxproj
 
 # User-specific files
 *.rsuser
